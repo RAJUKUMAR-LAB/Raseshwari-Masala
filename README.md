@@ -1,2 +1,0 @@
-# Raseshwari-Masala
-Raseshwari-Masala
