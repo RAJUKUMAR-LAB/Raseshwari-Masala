@@ -1432,118 +1432,6 @@ function copyInvoiceText() {
   });
 }
 
-// ==========================================================================
-// ORDER REVIEW & MESSAGE EDIT MODAL FUNCTIONS
-// ==========================================================================
-function openReviewModal(invoiceData) {
-  if (!invoiceData) {
-    showToast('No active invoice data to review.');
-    return;
-  }
-  window.activeReviewInvoiceData = invoiceData;
-  window.lastOrderInvoiceData = invoiceData;
-
-  const invNoEl = document.getElementById('review-inv-no');
-  if (invNoEl) invNoEl.textContent = invoiceData.invoiceNo || 'RS-ORD';
-
-  const payDispEl = document.getElementById('review-payment-disp');
-  if (payDispEl) payDispEl.innerHTML = `💵 ${invoiceData.paymentLabel || 'Cash on Delivery (COD)'}`;
-
-  const totalDispEl = document.getElementById('review-total-disp');
-  if (totalDispEl) totalDispEl.textContent = `₹${invoiceData.grandTotal || 0}`;
-
-  const messageText = buildWhatsAppOrderMessage(invoiceData);
-  const msgEl = document.getElementById('review-editable-message');
-  if (msgEl) {
-    msgEl.value = messageText;
-  }
-
-  // Update send button according to selected channel
-  const sendBtn = document.querySelector('.btn-review-send');
-  if (sendBtn) {
-    const btnSpan = sendBtn.querySelector('span');
-    if (window.activeOrderChannel === 'email') {
-      sendBtn.setAttribute('onclick', 'dispatchFinalOrder()');
-      if (btnSpan) btnSpan.textContent = 'Send via Email ➔';
-    } else if (window.activeOrderChannel === 'sms') {
-      sendBtn.setAttribute('onclick', 'dispatchFinalOrder()');
-      if (btnSpan) btnSpan.textContent = 'Send via SMS ➔';
-    } else {
-      sendBtn.setAttribute('onclick', "openLinePicker('order')");
-      if (btnSpan) btnSpan.textContent = 'Send on WhatsApp ➔';
-    }
-  }
-
-  const reviewModal = document.getElementById('order-review-modal');
-  if (reviewModal) {
-    reviewModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  } else {
-    // Fallback if modal container is missing on current page
-    openLinePicker('order');
-  }
-}
-
-function closeReviewModal(e) {
-  if (e && e.target && e.target.id !== 'order-review-modal' && !e.target.classList.contains('btn-close-modal')) {
-    return;
-  }
-  const modal = document.getElementById('order-review-modal');
-  if (modal) {
-    modal.classList.remove('active');
-  }
-  document.body.style.overflow = '';
-}
-
-function backToDeliveryForm() {
-  const reviewModal = document.getElementById('order-review-modal');
-  if (reviewModal) {
-    reviewModal.classList.remove('active');
-  }
-  const invoiceData = window.activeReviewInvoiceData || window.lastOrderInvoiceData;
-  if (invoiceData) {
-    const nameEl = document.getElementById('cust-name-input');
-    if (nameEl) nameEl.value = invoiceData.name || '';
-    const phoneEl = document.getElementById('cust-phone-input');
-    if (phoneEl) {
-      phoneEl.value = (invoiceData.phone || '').replace(/^\+91\s*/, '');
-    }
-    const flatEl = document.getElementById('cust-flat-input');
-    if (flatEl) flatEl.value = invoiceData.flat || '';
-    const lmEl = document.getElementById('cust-landmark-input');
-    if (lmEl) lmEl.value = invoiceData.landmark || '';
-    const cityEl = document.getElementById('cust-city-input');
-    if (cityEl) cityEl.value = invoiceData.city || 'Sitamarhi';
-    const stateEl = document.getElementById('cust-state-input');
-    if (stateEl) stateEl.value = invoiceData.state || 'Bihar';
-    const pinEl = document.getElementById('cust-pin-input');
-    if (pinEl) pinEl.value = invoiceData.pincode || '';
-  }
-  openDeliveryModal(window.activeOrderChannel || 'whatsapp');
-}
-
-function copyReviewMessageText() {
-  const msgEl = document.getElementById('review-editable-message');
-  const text = msgEl ? msgEl.value : (window.activeReviewInvoiceData ? buildWhatsAppOrderMessage(window.activeReviewInvoiceData) : '');
-  if (!text) {
-    showToast('No message text to copy.');
-    return;
-  }
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(() => {
-      showToast('Order message copied to clipboard! 📋', { duration: 1500 });
-    }).catch(() => {
-      showToast('Order message copied! 📋', { duration: 1500 });
-    });
-  } else {
-    if (msgEl) {
-      msgEl.select();
-      document.execCommand('copy');
-      showToast('Order message copied! 📋', { duration: 1500 });
-    }
-  }
-}
-
 function dispatchFinalOrder(targetPhone = null) {
   const invoiceData = window.activeReviewInvoiceData || window.lastOrderInvoiceData;
   if (!invoiceData) {
@@ -1562,19 +1450,6 @@ function dispatchFinalOrder(targetPhone = null) {
     reviewModal.classList.remove('active');
   }
 
-  // Clear delivery form
-  const df = document.getElementById("delivery-details-form");
-  if (df) df.reset();
-
-  // Clear cart since order is confirmed & placed
-  try {
-    state.cart = [];
-    saveCart();
-    updateCartUI();
-  } catch (e) {
-    console.error('Error clearing cart:', e);
-  }
-
   // Show Invoice Modal on screen with official retail bill
   showInvoiceModal(invoiceData);
 
@@ -1583,14 +1458,14 @@ function dispatchFinalOrder(targetPhone = null) {
     const waUrl = `https://wa.me/${phoneToSend}?text=${encodeURIComponent(finalText)}`;
     window.open(waUrl, '_blank');
     const lineLabel = phoneToSend.includes('98356') ? 'Line 2' : 'Line 1';
-    showToast(`Order sent to WhatsApp (${lineLabel})! 🛒`, { duration: 2500 });
+    showToast(`Order sent to WhatsApp (${lineLabel})! 🌿`, { duration: 2500 });
   } else if (channel === 'email') {
     const subject = encodeURIComponent(`New Spice Order ${invoiceData.invoiceNo} from ${invoiceData.name}`);
     window.location.href = `mailto:raseshwarimasala@gmail.com?subject=${subject}&body=${encodeURIComponent(finalText)}`;
     showToast('Opening email client... ✉️', { duration: 2500 });
   } else if (channel === 'sms') {
     window.location.href = `sms:+919905561443?body=${encodeURIComponent(finalText)}`;
-    showToast('Opening SMS app... 💬', { duration: 2500 });
+    showToast('Opening SMS app... 📱', { duration: 2500 });
   }
 }
 
@@ -1613,16 +1488,10 @@ function sendPDFBillFromModal() {
 function attachFormValidations() {
   // 1. Delivery Modal: Full Name
   const nameInput = document.getElementById('cust-name-input');
-  if (nameInput && nameInput.dataset.valAttached) {
-    return;
-  }
-  if (nameInput) {
-    nameInput.dataset.valAttached = "true";
-  }
   const nameErr = document.getElementById('cust-name-error');
   if (nameInput) {
     nameInput.addEventListener('input', function(e) {
-      let val = e.target.value.replace(/[^a-zA-Z\u0900-\u097F\s.]/g, '');
+      let val = e.target.value.replace(/[^a-zA-Z\s.]/g, '');
       e.target.value = val;
       if (val.trim().length === 0) {
         nameInput.classList.remove('is-invalid', 'is-valid');
@@ -1758,7 +1627,7 @@ function attachFormValidations() {
   const inqNameErr = document.getElementById('inq-name-error');
   if (inqName) {
     inqName.addEventListener('input', function(e) {
-      let val = e.target.value.replace(/[^a-zA-Z\u0900-\u097F\s.]/g, '');
+      let val = e.target.value.replace(/[^a-zA-Z\s.]/g, '');
       e.target.value = val;
       if (val.trim().length < 3 && val.trim().length > 0) {
         inqName.classList.add('is-invalid');
@@ -1918,6 +1787,8 @@ function handleConfirmOrder(e) {
   // Close Delivery Modal & Cart Drawer
   closeDeliveryModal();
   toggleCartDrawer(false);
+  const df = document.getElementById("delivery-details-form");
+  if (df) df.reset();
 
   // Open Message Review & Edit Modal (Step before final sending, per user requirement)
   openReviewModal(invoiceData);
