@@ -2,8 +2,8 @@
 ### *Pure Cold Stone-Ground Spices from Sitamarhi, Mithilanchal (Bihar)*
 
 [![License](https://img.shields.io/badge/License-Proprietary-red.svg)](license)
-[![FSSAI](https://img.shields.io/badge/FSSAI-10018064001572-green.svg)](https://fssai.gov.in)
-[![GSTIN](https://img.shields.io/badge/GSTIN-10REAPK9623A1ZS-blue.svg)](gst-certificate-raseshwari.pdf)
+[![FSSAI](https://img.shields.io/badge/FSSAI-20426093000164-green.svg)](https://fssai.gov.in)
+[![GSTIN](https://img.shields.io/badge/GSTIN-10REAPK9623A1ZS-blue.svg)](https://drive.google.com/file/d/1NE_wjUTazx2en-Qp82WTnuiDpy9su_Os/view?usp=sharing)
 [![Live Demo](https://img.shields.io/badge/Website-Live_Online-emerald.svg)](https://rajukumar-lab.github.io/)
 
 ---
@@ -26,8 +26,8 @@
 | **Legal Entity** | Raseshwari Foods Pvt. Ltd. |
 | **Founder & Proprietor** | Vishal Kumar |
 | **GSTIN (Govt. of India)** | `10REAPK9623A1ZS` (Form GST REG-06) |
-| **FSSAI Food Safety Lic.** | `10018064001572` |
-| **Mill & Facility Address** | Plot No. 12, Industrial Area, Bhairo Bhoop, Dumra Road, Sitamarhi, Bihar - 843302 |
+| **FSSAI Food Safety Lic.** | `20426093000164` |
+| **Mill & Facility Address** | Plot No. 12, Industrial Area, Bhairo Bhoop, Bhoopbhairo (Ward No. 06), Bhairo Bhup, Dumra, Sitamarhi, Bihar - 843302 |
 | **Official Helpline 1** | [+91 99055 61443](tel:+919905561443) |
 | **Official Helpline 2** | [+91 98356 54983](tel:+919835654983) |
 | **Official Email** | [raseshwarimasala@gmail.com](mailto:raseshwarimasala@gmail.com) |
@@ -59,7 +59,7 @@ c:\rajeshwarimasala\
 ├── invoice.html                   # Official PDF retail bill & tax invoice generator
 ├── style.css                      # Master responsive stylesheet (Royal Amber & Crimson theme)
 ├── app.js                         # Core application logic, cart state, modal handlers & WhatsApp builder
-├── gst-certificate-raseshwari.pdf # Official Government GST Registration Certificate (REG-06)
+├── https://drive.google.com/file/d/1NE_wjUTazx2en-Qp82WTnuiDpy9su_Os/view?usp=sharing # Official Government GST Registration Certificate (REG-06)
 ├── html2pdf.bundle.min.js         # Client-side vector PDF generation library
 ├── server.py                      # Lightweight Python local development HTTP server
 └── README.md                      # Project documentation and developer reference
@@ -105,7 +105,7 @@ To generate or view an online invoice:
 
 For wholesale B2B inquiries, distributor dealerships, or direct customer assistance:
 - **Phone / WhatsApp**: [+91 99055 61443](https://wa.me/919905561443) / [+91 98356 54983](https://wa.me/919835654983)
-- **Mill Facility**: Bhairo Bhoop, Dumra Road, Sitamarhi, Bihar - 843302
+- **Mill Facility**: Bhairo Bhoop, Bhoopbhairo (Ward No. 06), Bhairo Bhup, Dumra, Sitamarhi, Bihar - 843302
 - **Website**: [Raseshwari Spices Official](https://rajukumar-lab.github.io/)
 
 ---

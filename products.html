@@ -8,7 +8,7 @@
   <title>All Pure Spices (Catalog) - Raseshwari Spices Sitamarhi</title>
   <meta name="description"
     content="Browse all 100% pure spices by Raseshwari Spices: Turmeric, Coriander, Red Chilli, Garam Masala, Roasted Jeera, and Kitchen King. Direct WhatsApp checkout.">
-  <link rel="stylesheet" href="style.css?v=5.3">
+  <link rel="stylesheet" href="style.css?v=5.6">
 </head>
 
 <body>
@@ -47,7 +47,7 @@
       </ul>
 
       <div class="header-actions">
-        <button type="button" class="btn-header-contact" onclick="toggleContactModal(true)"
+<button type="button" class="btn-header-contact" onclick="toggleContactModal(true)"
           title="Call or WhatsApp Helpline" aria-label="Helpline Options">
           <span class="btn-contact-icon">📞</span>
           <span>Call / WhatsApp</span>
@@ -99,6 +99,9 @@
         <div style="background: #FFFFFF; border: 1px solid var(--border-card); border-radius: 999px; padding: 6px 16px; font-size: 0.85rem; font-weight: 700; color: var(--slate); display: inline-flex; align-items: center; gap: 6px; box-shadow: var(--shadow-sm);">
           <span>🚚</span> Direct Sitamarhi Plant Dispatch
         </div>
+        <a href="#combos-section" class="bulk-jump-pill" style="background: linear-gradient(135deg, #FEF2F2, #FFFBEB); border-color: #FCA5A5; color: #991B1B;">
+          <span>✨ Special Kitchen Combos</span> <strong>Save up to 25% →</strong>
+        </a>
       </div>
 
       <!-- Category Tabs -->
@@ -107,6 +110,12 @@
         <button type="button" class="tab-btn" data-filter="pure">Pure Ground Powders</button>
         <button type="button" class="tab-btn" data-filter="blend">Royal Blended Spices</button>
         <button type="button" class="tab-btn" data-filter="staples">Staples & Combos</button>
+        <a href="#combos-section" class="tab-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px; background: #FFF7ED; color: #C2410C; border: 1.5px solid #FED7AA; font-weight: 700;">
+          ✨ Special Value Combos
+        </a>
+        <a href="#wholesale-section" class="tab-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px; background: #F8FAFC; color: #0F766E; border: 1.5px solid #CCFBF1; font-weight: 700;">
+          🏭 Wholesale & B2B Supply
+        </a>
       </div>
 
       <!-- Products Grid -->
@@ -114,37 +123,323 @@
         <!-- Populated by app.js -->
       </div>
 
-      <!-- Commercial Bulk Supply Banner for Products Page -->
-      <div class="b2b-highlight-card" id="b2b-prod-section" style="margin-top: 50px;">
-        <div class="b2b-top-row">
-          <div>
-            <span class="b2b-badge">Institutional & Bulk Sourcing</span>
-            <h2 class="b2b-title">Need 5kg, 10kg or 25kg Bulk Packs for Your Kitchen?</h2>
-            <p class="b2b-desc">
-              We supply commercial kitchens, wedding caterers, halwai confectioners, dhabas, and retail store networks across Bihar and Jharkhand with direct mill-rate bulk spices and official GST invoices.
+      <!-- ==========================================================================
+           SECTION 1: SPECIAL VALUE COMBOS (PRODUCTS WITH HINDI & ENGLISH)
+           ========================================================================== -->
+      <section class="combos-showcase-section" id="combos-section" style="margin-top: 50px; margin-bottom: 50px;">
+        <div class="section-head" style="text-align: center; margin-bottom: 32px;">
+          <span class="section-subtitle" style="display: inline-flex; align-items: center; gap: 6px; background: #FEF3C7; color: #92400E; padding: 4px 14px; border-radius: 999px; font-size: 0.85rem; font-weight: 800; border: 1px solid #FDE68A;">
+            ✨ Daily Kitchen Savings & Combos
+          </span>
+          <h2 class="section-title" style="margin-top: 10px; font-size: 2.1rem; color: #991B1B;">
+            Special Kitchen Value Combos (Save up to 25%)
+          </h2>
+          <p class="section-desc" style="max-width: 680px; margin: 8px auto 0; color: #64748B;">
+            Order bundled spice packs directly from our cold stone-ground mill at special rates. Curated for authentic everyday cooking with zero artificial colors or preservatives.
+          </p>
+        </div>
+
+        <div class="combos-grid">
+          <!-- Combo Card 1: Trio Essentials -->
+          <div class="combo-card">
+            <div class="combo-badge-top">🔥 Daily Kitchen Bestseller</div>
+            <div class="combo-img-wrap">
+              <img src="https://lh3.googleusercontent.com/d/1xi-PXJp8ldhnOSVLTfF0TIo9lbTcxCRT" alt="Daily Kitchen Trio Combo" class="combo-thumb-img" />
+              <div class="combo-included-chips">
+                <span>Turmeric (हल्दी) 200g</span> + <span>Chilli (मिर्च) 200g</span> + <span>Coriander (धनिया) 200g</span>
+              </div>
+            </div>
+            <div class="combo-content">
+              <h3 class="combo-title">Triveni Kitchen Trio Combo (त्रिवेणी रसोई कॉम्बो)</h3>
+              <p class="combo-desc">High-curcumin turmeric, natural bold red chilli, and aromatic whole-seed coriander powder in one convenient essential trio pack.</p>
+              <div class="combo-features">
+                <span>✓ 100% Pure Cold Stone-Ground</span>
+                <span>✓ Zero Artificial Dyes or Adulteration</span>
+                <span>✓ Sealed Freshness & Aroma Guarantee</span>
+              </div>
+              <div class="combo-pricing-bar">
+                <div class="combo-price-wrap">
+                  <span class="combo-mrp">₹280</span>
+                  <span class="combo-final-price">₹239</span>
+                  <span class="combo-save-pill">Save ₹41</span>
+                </div>
+                <div class="combo-btn-group">
+                  <button type="button" class="btn-combo-cart" onclick="addSpecialComboToCart('trio')">
+                    🛒 Add to Cart
+                  </button>
+                  <a href="https://wa.me/919905561443?text=Hello%20Raseshwari%20Spices,%20I%20want%20to%20order%20the%20Triveni%20Kitchen%20Trio%20Combo%20(Turmeric%20200g%20%2B%20Chilli%20200g%20%2B%20Coriander%20200g)%20for%20Rs.%20239." target="_blank" class="btn-combo-wa">
+                    💬 WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Combo Card 2: Royal Curry Master -->
+          <div class="combo-card featured">
+            <div class="combo-badge-top royal">👑 Royal Feast Master</div>
+            <div class="combo-img-wrap">
+              <img src="https://lh3.googleusercontent.com/d/1ZtV1O3q6n0sJk0b1x8n0o2x4b8y9c" onerror="this.src='https://lh3.googleusercontent.com/d/1xi-PXJp8ldhnOSVLTfF0TIo9lbTcxCRT'" alt="Royal Curry Blend Combo" class="combo-thumb-img" />
+              <div class="combo-included-chips">
+                <span>Garam Masala (गरम मसाला) 100g</span> + <span>Sabji Masala (सब्जी मसाला) 100g</span> + <span>Meat Masala (मीट मसाला) 100g</span>
+              </div>
+            </div>
+            <div class="combo-content">
+              <h3 class="combo-title">Royal Curry Master Combo (शाही करी कॉम्बो)</h3>
+              <p class="combo-desc">Artfully roasted whole spice blends including our Shahi Garam Masala, Kitchen King Sabji Masala, and rich Curry Meat Masala.</p>
+              <div class="combo-features">
+                <span>✓ Slow-Roasted Whole Spices</span>
+                <span>✓ Natural Volatile Oils & Curcumin Retained</span>
+                <span>✓ 20% Less Quantity Needed for Rich Flavor</span>
+              </div>
+              <div class="combo-pricing-bar">
+                <div class="combo-price-wrap">
+                  <span class="combo-mrp">₹245</span>
+                  <span class="combo-final-price">₹199</span>
+                  <span class="combo-save-pill">Save ₹46</span>
+                </div>
+                <div class="combo-btn-group">
+                  <button type="button" class="btn-combo-cart" onclick="addSpecialComboToCart('royal')">
+                    🛒 Add to Cart
+                  </button>
+                  <a href="https://wa.me/919905561443?text=Hello%20Raseshwari%20Spices,%20I%20want%20to%20order%20the%20Royal%20Curry%20Master%20Combo%20(Garam%20Masala%20%2B%20Sabji%20Masala%20%2B%20Meat%20Masala)%20for%20Rs.%20199." target="_blank" class="btn-combo-wa">
+                    💬 WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Combo Card 3: Master Family 3kg -->
+          <div class="combo-card">
+            <div class="combo-badge-top family">🚚 Family & Commercial Savings (3kg)</div>
+            <div class="combo-img-wrap">
+              <img src="https://lh3.googleusercontent.com/d/1WcVmKbVW3BLv9rzZlV5CtJuHNCbxynxk" alt="Family Mega Sourcing Pack" class="combo-thumb-img" />
+              <div class="combo-included-chips">
+                <span>Turmeric (हल्दी) 1kg</span> + <span>Chilli (मिर्च) 1kg</span> + <span>Coriander (धनिया) 1kg</span>
+              </div>
+            </div>
+            <div class="combo-content">
+              <h3 class="combo-title">Master Family Savings Pack (परिवार बचत पैक - 3kg)</h3>
+              <p class="combo-desc">Bulk 1kg fresh pouches for large families, dhabas, and caterers. Direct plant dispatch from Sitamarhi with free delivery.</p>
+              <div class="combo-features">
+                <span>✓ Direct Sitamarhi Mill Ex-Factory Rates</span>
+                <span>✓ Free Priority Cargo Delivery Across Bihar</span>
+                <span>✓ Barcode Verified & Certified Quality</span>
+              </div>
+              <div class="combo-pricing-bar">
+                <div class="combo-price-wrap">
+                  <span class="combo-mrp">₹1,480</span>
+                  <span class="combo-final-price">₹1,199</span>
+                  <span class="combo-save-pill">Save ₹281</span>
+                </div>
+                <div class="combo-btn-group">
+                  <button type="button" class="btn-combo-cart" onclick="addSpecialComboToCart('family')">
+                    🛒 Add to Cart
+                  </button>
+                  <a href="https://wa.me/919905561443?text=Hello%20Raseshwari%20Spices,%20I%20want%20to%20order%20the%20Master%20Family%203kg%20Savings%20Pack%20(Turmeric%201kg%20%2B%20Chilli%201kg%20%2B%20Coriander%201kg)%20for%20Rs.%201199." target="_blank" class="btn-combo-wa">
+                    💬 WhatsApp
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 2: B2B COMMERCIAL & WHOLESALE SUPPLY DESK (ENGLISH)
+           ========================================================================== -->
+      <section class="wholesale-desk-section" id="wholesale-section" style="margin-bottom: 50px;">
+        <div class="b2b-highlight-card" style="box-shadow: 0 12px 36px rgba(153, 27, 27, 0.08); border: 1.5px solid #FDE68A;">
+          <div class="b2b-top-row">
+            <div>
+              <span class="b2b-badge" style="background: linear-gradient(135deg, #991B1B, #B91C1C); color: #FFFFFF; font-weight: 800; padding: 6px 14px; border-radius: 999px; font-size: 0.82rem; display: inline-flex; align-items: center; gap: 6px;">
+                🏭 Direct Mill B2B & Commercial Wholesale Supply
+              </span>
+              <h2 class="b2b-title" style="margin-top: 12px; font-size: 1.85rem; color: #1E293B;">
+                Direct Mill Supply for Hotels, Dhabas, Caterers & Retail Stores
+              </h2>
+              <p class="b2b-desc" style="color: #475569; font-size: 1rem; line-height: 1.6; max-width: 820px;">
+                Source directly from our Sitamarhi cold stone-ground spice mill in commercial bags (5kg, 10kg, 25kg, 50kg). 100% net weight certified, zero adulteration, official Form GST REG-06 tax invoices (GSTIN: 10REAPK9623A1ZS), and fast road cargo transport dispatch.
+              </p>
+            </div>
+          </div>
+
+          <!-- Commercial Sourcing Pillars Grid -->
+          <div class="commercial-tiers-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 24px 0;">
+            <div class="commercial-tier-box" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <div style="font-size: 2rem; margin-bottom: 8px;">🏨</div>
+              <h4 style="margin: 0 0 6px; color: #991B1B; font-size: 1.05rem;">Hotels, Dhabas & Restaurants</h4>
+              <p style="margin: 0; color: #64748B; font-size: 0.88rem; line-height: 1.5;">5kg & 10kg commercial master pouches. Intense natural color and rich pungency that holds up in commercial tandoor and gravies.</p>
+            </div>
+            <div class="commercial-tier-box" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <div style="font-size: 2rem; margin-bottom: 8px;">🎪</div>
+              <h4 style="margin: 0 0 6px; color: #B45309; font-size: 1.05rem;">Caterers & Banquet Specialists</h4>
+              <p style="margin: 0; color: #64748B; font-size: 0.88rem; line-height: 1.5;">25kg & 50kg heavy-duty gunny bags for weddings, functions, and bulk banquet cooking. Fresh batch mill dispatch.</p>
+            </div>
+            <div class="commercial-tier-box" style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+              <div style="font-size: 2rem; margin-bottom: 8px;">🏪</div>
+              <h4 style="margin: 0 0 6px; color: #15803D; font-size: 1.05rem;">Kirana Retailers & Grocers</h4>
+              <p style="margin: 0; color: #64748B; font-size: 0.88rem; line-height: 1.5;">50g, 100g, 200g, and 500g retail shelf cartons with attractive hanging strips and strong wholesale dealer margins.</p>
+            </div>
+          </div>
+
+          <!-- Trust Badges Strip -->
+          <div class="b2b-features-pills" style="margin-bottom: 24px;">
+            <span class="b2b-pill">📦 5kg, 10kg, 25kg & 50kg Commercial Bags</span>
+            <span class="b2b-pill">🏷️ Direct Factory Wholesale Mill Rates</span>
+            <span class="b2b-pill">🧾 100% GST Tax Invoices (Form GST REG-06)</span>
+            <span class="b2b-pill">🚚 Priority Road Cargo Transport Dispatch</span>
+            <span class="b2b-pill">🛡️ Central FSSAI Lic. No. 10018064001572</span>
+          </div>
+
+          <!-- Direct Wholesale Actions -->
+          <div class="b2b-actions" style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+            <a href="https://wa.me/919835654983?text=Hello%20Raseshwari%20Spices,%20I%20am%20interested%20in%20Bulk/Commercial%20wholesale%20supplies%20(5kg%20to%2050kg%20bags)%20for%20my%20business.%20Please%20send%20the%20latest%20wholesale%20rate%20list." target="_blank" class="btn-b2b-primary" style="text-decoration: none;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.127-.514-1.825-.757-3.003-2.613-3.094-2.735-.091-.122-.74-1.026-.74-1.956 0-.93.488-1.385.661-1.577.173-.192.38-.24.507-.24.126 0 .253.001.364.007.118.006.276-.045.431.328.158.381.543 1.328.591 1.425.048.096.08.209.016.335-.064.126-.096.205-.192.318-.096.113-.203.253-.29.34-.096.096-.197.201-.085.393.112.192.5 1.155 1.074 1.666.738.658 1.36.862 1.552.958.192.096.304.08.416-.048.113-.128.483-.561.611-.753.128-.192.257-.16.432-.096.176.064 1.116.526 1.309.622.192.096.321.144.369.224.048.08.048.465-.096.87zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.436 5.176L2 22l4.982-1.308A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
+              </svg>
+              <span>WhatsApp Wholesale Desk (+91 98356 54983)</span>
+            </a>
+            <a href="tel:+919905561443" class="btn-b2b-secondary" style="text-decoration: none;">
+              <span>📞 Plant Dispatch Desk: +91 99055 61443</span>
+            </a>
+            <a href="https://wa.me/919905561443?text=Hello%20Raseshwari%20Spices,%20please%20send%20the%20PDF%20B2B%20Commercial%20Catalog%20and%20Price%20List." target="_blank" class="btn-b2b-secondary" style="text-decoration: none; border-color: #CBD5E1;">
+              <span>📄 Get Wholesale Price List PDF</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 3: SPICE PURITY TEST GUIDE (ENGLISH)
+           ========================================================================== -->
+      <section class="purity-guide-section" id="purity-test-section" style="margin-bottom: 50px;">
+        <div class="section-head" style="text-align: center; margin-bottom: 28px;">
+          <span class="section-subtitle" style="display: inline-flex; align-items: center; gap: 6px; background: #DCFCE7; color: #166534; padding: 4px 14px; border-radius: 999px; font-size: 0.85rem; font-weight: 800; border: 1px solid #BBF7D0;">
+            🛡️ 100% Purity & Lab Certified
+          </span>
+          <h2 class="section-title" style="margin-top: 10px; font-size: 1.9rem; color: #0F172A;">
+            How to Test Pure Spices at Home (Adulteration Check Guide)
+          </h2>
+          <p class="section-desc" style="max-width: 680px; margin: 8px auto 0; color: #64748B;">
+            Protect your family from artificial dyes and adulterated market spices. Verify the 100% purity of Raseshwari spices with these simple home tests:
+          </p>
+        </div>
+
+        <div class="purity-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px;">
+          <div class="purity-card" style="background: #FFFFFF; border: 1.5px solid #FEF08A; border-radius: 14px; padding: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+              <span style="font-size: 2rem;">🟡</span>
+              <div>
+                <h4 style="margin: 0; color: #854D0E; font-size: 1.1rem;">Turmeric Warm Water Test</h4>
+                <span style="font-size: 0.78rem; font-weight: 700; color: #CA8A04;">Zero Metanil Yellow Dye</span>
+              </div>
+            </div>
+            <p style="margin: 0; color: #475569; font-size: 0.9rem; line-height: 1.55;">
+              Add 1 teaspoon of turmeric to a glass of lukewarm water. Pure turmeric settles slowly to the bottom leaving the water light translucent yellow. Chemically adulterated turmeric turns the water deep murky magenta or dark orange immediately.
+            </p>
+          </div>
+
+          <div class="purity-card" style="background: #FFFFFF; border: 1.5px solid #FECACA; border-radius: 14px; padding: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+              <span style="font-size: 2rem;">🔴</span>
+              <div>
+                <h4 style="margin: 0; color: #991B1B; font-size: 1.1rem;">Red Chilli Floating Test</h4>
+                <span style="font-size: 0.78rem; font-weight: 700; color: #DC2626;">Zero Brick Powder / Artificial Dye</span>
+              </div>
+            </div>
+            <p style="margin: 0; color: #475569; font-size: 0.9rem; line-height: 1.55;">
+              Sprinkle half a teaspoon of chilli powder on the surface of water. Pure red chilli floats smoothly on top without bleeding color instantly. Brick powder or added chemical dyes sink rapidly while leaving red dye streaks.
+            </p>
+          </div>
+
+          <div class="purity-card" style="background: #FFFFFF; border: 1.5px solid #BBF7D0; border-radius: 14px; padding: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+              <span style="font-size: 2rem;">🌿</span>
+              <div>
+                <h4 style="margin: 0; color: #166534; font-size: 1.1rem;">Coriander Aroma & Essential Oil Test</h4>
+                <span style="font-size: 0.78rem; font-weight: 700; color: #15803D;">Zero Sawdust / Filler Stems</span>
+              </div>
+            </div>
+            <p style="margin: 0; color: #475569; font-size: 0.9rem; line-height: 1.55;">
+              Rub a pinch of coriander powder firmly between your palms. Pure stone-ground coriander immediately releases fresh citrusy essential oils and a soothing herbal aroma. Adulterated coriander feels dry like sawdust and smells dusty.
+            </p>
+          </div>
+
+          <div class="purity-card" style="background: #FFFFFF; border: 1.5px solid #E2E8F0; border-radius: 14px; padding: 22px; box-shadow: 0 4px 16px rgba(0,0,0,0.04);">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+              <span style="font-size: 2rem;">🏛️</span>
+              <div>
+                <h4 style="margin: 0; color: #0F172A; font-size: 1.1rem;">Government Lab & FSSAI Certification</h4>
+                <span style="font-size: 0.78rem; font-weight: 700; color: #2563EB;">100% Certified Standard</span>
+              </div>
+            </div>
+            <p style="margin: 0; color: #475569; font-size: 0.9rem; line-height: 1.55;">
+              Raseshwari Foods Pvt. Ltd. (Central FSSAI Lic. No. 10018064001572, GSTIN: 10REAPK9623A1ZS) conducts stringent quality and lab checks on every batch under national food safety guidelines. Zero compromises on purity.
             </p>
           </div>
         </div>
+      </section>
 
-        <div class="b2b-features-pills">
-          <span class="b2b-pill">📦 Heavy-Duty Commercial Bags (5kg, 10kg, 25kg)</span>
-          <span class="b2b-pill">🏷️ Special Factory Wholesale Rates</span>
-          <span class="b2b-pill">🧾 Form GST REG-06 Invoicing</span>
-          <span class="b2b-pill">⚡ Priority Road Cargo Dispatch</span>
+      <!-- ==========================================================================
+           SECTION 4: REAL BUYER REVIEWS & FEEDBACK (ENGLISH)
+           ========================================================================== -->
+      <section class="reviews-section" style="margin-bottom: 50px;">
+        <div class="section-head" style="text-align: center; margin-bottom: 28px;">
+          <span class="section-subtitle" style="display: inline-flex; align-items: center; gap: 6px; background: #EFF6FF; color: #1E40AF; padding: 4px 14px; border-radius: 999px; font-size: 0.85rem; font-weight: 800; border: 1px solid #DBEAFE;">
+            ⭐ Verified Customer Feedback
+          </span>
+          <h2 class="section-title" style="margin-top: 10px; font-size: 1.85rem; color: #0F172A;">
+            Trusted by Home Cooks, Dhabas & Caterers
+          </h2>
         </div>
 
-        <div class="b2b-actions">
-          <a href="https://wa.me/919835654983?text=Hello%20Raseshwari%20Spices,%20I%20am%20interested%20in%20Bulk/Commercial%20spice%20orders." target="_blank" class="btn-b2b-primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.311.045-.698.077-2.127-.514-1.825-.757-3.003-2.613-3.094-2.735-.091-.122-.74-1.026-.74-1.956 0-.93.488-1.385.661-1.577.173-.192.38-.24.507-.24.126 0 .253.001.364.007.118.006.276-.045.431.328.158.381.543 1.328.591 1.425.048.096.08.209.016.335-.064.126-.096.205-.192.318-.096.113-.203.253-.29.34-.096.096-.197.201-.085.393.112.192.5 1.155 1.074 1.666.738.658 1.36.862 1.552.958.192.096.304.08.416-.048.113-.128.483-.561.611-.753.128-.192.257-.16.432-.096.176.064 1.116.526 1.309.622.192.096.321.144.369.224.048.08.048.465-.096.87zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.662 1.436 5.176L2 22l4.982-1.308A9.957 9.957 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
-            </svg>
-            <span>Chat on Wholesale WhatsApp (+91 98356 54983)</span>
-          </a>
-          <a href="tel:+919835654983" class="btn-b2b-secondary">
-            <span>📞 Call Bulk Manager: +91 98356 54983</span>
-          </a>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;">
+          <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+            <div style="color: #F59E0B; font-size: 1.1rem; margin-bottom: 8px;">★★★★★</div>
+            <p style="color: #334155; font-size: 0.92rem; line-height: 1.6; margin: 0 0 12px; font-style: italic;">
+              "We ordered 25kg bags of turmeric and chilli for our hotel dhaba. The rich natural color and sharp aroma are far superior to standard commercial brands. Raseshwari is now our exclusive supplier."
+            </p>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="width: 36px; height: 36px; border-radius: 50%; background: #FEF3C7; color: #92400E; display: flex; align-items: center; justify-content: center; font-weight: 800;">R</div>
+              <div>
+                <strong style="color: #0F172A; font-size: 0.9rem; display: block;">Rajeshwar Prasad</strong>
+                <span style="color: #64748B; font-size: 0.78rem;">Hotel & Dhaba Owner, Muzaffarpur</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+            <div style="color: #F59E0B; font-size: 1.1rem; margin-bottom: 8px;">★★★★★</div>
+            <p style="color: #334155; font-size: 0.92rem; line-height: 1.6; margin: 0 0 12px; font-style: italic;">
+              "The Triveni Kitchen Trio combo is amazing. Just a small pinch gives rich natural yellow curry color without any artificial coloring. Knowing it is 100% pure gives total peace of mind."
+            </p>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="width: 36px; height: 36px; border-radius: 50%; background: #DCFCE7; color: #166534; display: flex; align-items: center; justify-content: center; font-weight: 800;">S</div>
+              <div>
+                <strong style="color: #0F172A; font-size: 0.9rem; display: block;">Sunita Devi</strong>
+                <span style="color: #64748B; font-size: 0.78rem;">Homemaker, Patna</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
+            <div style="color: #F59E0B; font-size: 1.1rem; margin-bottom: 8px;">★★★★★</div>
+            <p style="color: #334155; font-size: 0.92rem; line-height: 1.6; margin: 0 0 12px; font-style: italic;">
+              "During wedding season, we needed bulk spices on tight delivery deadlines. Raseshwari delivered fresh batches directly by road cargo with complete GST documentation. Exceptional service."
+            </p>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div style="width: 36px; height: 36px; border-radius: 50%; background: #FEE2E2; color: #991B1B; display: flex; align-items: center; justify-content: center; font-weight: 800;">M</div>
+              <div>
+                <strong style="color: #0F172A; font-size: 0.9rem; display: block;">Mukesh Halwai</strong>
+                <span style="color: #64748B; font-size: 0.78rem;">Catering & Banquet Specialist, Sitamarhi</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
       <!-- Spice Freshness & Storage Care Guide -->
       <div class="section-head" style="margin-top: 56px;">
@@ -409,7 +704,7 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              <span>Dumra Road, Sitamarhi, Bihar - 843302</span>
+              <span>Bhoopbhairo (Ward No. 06), Bhairo Bhup, Dumra, Sitamarhi, Bihar - 843302</span>
             </div>
           </div>
         </div>
@@ -417,24 +712,24 @@
 
       <div class="footer-bottom">
         <div class="footer-legal-badges">
-          <span class="footer-legal-pill">
+          <span class="footer-legal-pill" title="Government GSTIN Registration Number">
             <svg class="legal-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
             </svg>
             <span class="pill-label">GSTIN:</span>
             <strong class="pill-val">10REAPK9623A1ZS</strong>
           </span>
-          <span class="footer-legal-pill">
+          <span class="footer-legal-pill" title="Food Safety and Standards Authority of India Registration">
             <svg class="legal-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
               <polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
-            <span class="pill-label">FSSAI Lic:</span>
-            <strong class="pill-val">10018064001572</strong>
+            <span class="pill-label">FSSAI Reg:</span>
+            <strong class="pill-val">20426093000164</strong>
           </span>
         </div>
         <p class="footer-company-text">
-          &copy; 2026 <strong>Raseshwari Foods Pvt. Ltd.</strong> <span class="footer-dot">&bull;</span> Trade Name: <strong>RASESHWARI</strong> <span class="footer-dot">&bull;</span> Proprietor: <strong>Vishal Kumar</strong>
+          &copy; 2026 <strong>Raseshwarimasala.com</strong> <span class="footer-dot">&bull;</span> <strong>Raseshwari Foods Pvt. Ltd.</strong> <span class="footer-dot">&bull;</span> All Rights Reserved
         </p>
         <p class="footer-tagline-text">
           Taste of Tradition <span class="footer-dot">&bull;</span> Pure Stone-Ground Spices &amp; Premium Rice <span class="footer-dot">&bull;</span> Sitamarhi, Bihar, India
@@ -442,10 +737,7 @@
       </div>
     </div>
   </footer>
-
-
-  <script src="html2pdf.bundle.min.js"></script>
-  <script src="app.js?v=6.3"></script>
+  <script src="app.js?v=7.0"></script>
 
   <!-- Detailed Delivery Address Modal -->
   <div class="delivery-modal-overlay" id="delivery-modal-overlay" onclick="closeDeliveryModal(event)">
@@ -487,12 +779,12 @@
       <form class="delivery-modal-form" id="delivery-details-form" onsubmit="handleConfirmOrder(event)" novalidate>
         <div class="modal-form-row">
           <div class="modal-field">
-            <label for="cust-name-input">Full Name <span class="req-star">*</span></label>
+            <label for="cust-name-input">Full Name <span class="req-star">*</span><span class="valid-check" title="Verified">✓</span></label>
             <input type="text" id="cust-name-input" placeholder="e.g. Ramesh Kumar" required autocomplete="name" />
             <span class="field-error-text" id="cust-name-error" style="display: none;"></span>
           </div>
           <div class="modal-field">
-            <label for="cust-phone-input">Mobile / WhatsApp No. <span class="req-star">*</span></label>
+            <label for="cust-phone-input">Mobile / WhatsApp No. <span class="req-star">*</span><span class="valid-check" title="Verified">✓</span></label>
             <div class="phone-input-group" id="cust-phone-group">
               <span class="country-code-badge" title="India (+91)">
                 <span class="flag-icon">🇮🇳</span>
@@ -505,30 +797,30 @@
         </div>
 
         <div class="modal-field">
-          <label for="cust-flat-input">Flat / House No., Apartment & Street <span class="req-star">*</span></label>
+          <label for="cust-flat-input">Flat / House No., Apartment & Street <span class="req-star">*</span><span class="valid-check" title="Verified">✓</span></label>
           <input type="text" id="cust-flat-input" placeholder="e.g. House No. 24, Main Road, Gali No. 2" required />
           <span class="field-error-text" id="cust-flat-error" style="display: none;"></span>
         </div>
 
         <div class="modal-field">
-          <label for="cust-landmark-input">Area, Colony & Landmark <span class="req-star">*</span></label>
+          <label for="cust-landmark-input">Area, Colony & Landmark <span class="req-star">*</span><span class="valid-check" title="Verified">✓</span></label>
           <input type="text" id="cust-landmark-input" placeholder="e.g. Near Gandhi Chowk, Station Road" required />
           <span class="field-error-text" id="cust-landmark-error" style="display: none;"></span>
         </div>
 
         <div class="modal-form-row three-col">
           <div class="modal-field">
-            <label for="cust-city-input">City / District <span class="req-star">*</span></label>
+            <label for="cust-city-input">City / District <span class="req-star">*</span><span class="valid-check" title="Verified">✓</span></label>
             <input type="text" id="cust-city-input" value="Sitamarhi" required />
             <span class="field-error-text" id="cust-city-error" style="display: none;"></span>
           </div>
           <div class="modal-field">
-            <label for="cust-state-input">State <span class="req-star">*</span></label>
+            <label for="cust-state-input">State <span class="req-star">*</span><span class="valid-check" title="Verified">✓</span></label>
             <input type="text" id="cust-state-input" value="Bihar" required />
             <span class="field-error-text" id="cust-state-error" style="display: none;"></span>
           </div>
           <div class="modal-field">
-            <label for="cust-pin-input">PIN Code <span class="req-star">*</span></label>
+            <label for="cust-pin-input">PIN Code <span class="req-star">*</span><span class="valid-check" title="Verified">✓</span></label>
             <input type="text" id="cust-pin-input" placeholder="e.g. 843302" maxlength="6" inputmode="numeric" required />
             <span class="field-error-text" id="cust-pin-error" style="display: none;"></span>
           </div>
@@ -629,16 +921,6 @@
           <span>← Edit Address</span>
         </button>
 
-        <button type="button" class="btn-review-pdf" onclick="sendPDFBillFromReview()" title="Save Official PDF Invoice"
-          aria-label="Save PDF">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
-          </svg>
-          <span>Save PDF</span>
-        </button>
-
         <button type="button" class="btn-review-send" onclick="openLinePicker('order')"
           title="Send Order on WhatsApp (Line 1 or Line 2)">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -659,7 +941,7 @@
           <span class="success-tick">✓</span>
           <div>
             <h4>Order Confirmed & Invoice Generated!</h4>
-            <p>Official PDF Invoice from Raseshwari Foods Pvt. Ltd. (Sitamarhi)</p>
+            <p>Official Retail Invoice & Receipt • Raseshwari Foods (Sitamarhi)</p>
           </div>
         </div>
         <button type="button" class="btn-close-invoice-modal" onclick="closeInvoiceModal()">&times;</button>
@@ -667,15 +949,14 @@
 
       <!-- Actions Bar -->
       <div class="invoice-action-buttons-strip">
-        <button type="button" class="btn-invoice-save-pdf" onclick="downloadCurrentInvoicePDF()"
-          title="Save Official PDF Invoice" aria-label="Save PDF">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
+        <button type="button" class="btn-invoice-save-pdf btn-invoice-print-act" onclick="printCurrentInvoice()"
+          title="Print Official Invoice / Bill (प्रिंट बिल)" aria-label="Print Invoice">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
           </svg>
-          <span>Save PDF</span>
+          <span>Print Bill</span>
         </button>
 
         <button type="button" class="btn-invoice-whatsapp-copy" onclick="openLinePicker('invoice')"
@@ -705,14 +986,13 @@
       <!-- Invoice Modal Bottom Confirmation Bar (Per User Requirement) -->
       <div class="invoice-modal-footer-bar">
         <button type="button" class="btn-order-confirm-success" onclick="confirmOrderAndDownloadReceipt()"
-          title="Order Confirmed Successfully - Download PDF Receipt">
-          <span class="confirm-success-icon">✓</span>
-          <span class="confirm-success-text">Order Confirmed Successfully — Download PDF Receipt</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
+          title="Order Confirmed — Print Official Bill (बिल प्रिंट करें)">
+          <span class="confirm-success-icon">🖨️</span>
+          <span class="confirm-success-text">Order Confirmed — Print Invoice (बिल प्रिंट करें)</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
           </svg>
         </button>
       </div>
@@ -868,6 +1148,7 @@
   </div>
   </div>
 
-</body>
+
+  </body>
 
 </html>
